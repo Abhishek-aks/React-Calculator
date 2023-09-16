@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.calci-app{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main-div{
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 10px;
+  box-shadow: -30px 10px 120px 20px rgba(197, 122, 140, 0.47), 50px 5px 120px 20px rgba(118, 105, 219, 0.47);
+  border-radius: 20px;
+}
+.data-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  width: 90%;
+}
+.data-container input{
+  width: 90%;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.buttons-container{
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.buttons-container button{
+  background-color: #2B2B2B;
+  width: 60px;
+  height: 50px;
+  color: rgb(239, 210, 114);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+  margin: 0;
+    position: sticky;
+    /* top: 50%;  */
+    /* right: 50%;
+    transform: translate(50%,-50%); */
+    text-align: center;
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 36px;
+    font-weight: 700;
+    color: #100f0f;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.error{
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 30%;
+  padding: 0%;
+  margin: 0;
+  background-color: rgba(242, 183, 196, 0.47); 
+  box-shadow: -20px 0px 100px 30px rgba(239, 73, 109, 0.47); 
+}
+.success{
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 30%;
+  padding: 0%;
+  margin: 0;
+  background-color: rgba(208, 236, 213, 0.47); 
+  box-shadow: -30px 1px 120px 30px rgba(119, 216, 137, 0.47); 
+}
+span{
+  animation: blink 1.5s linear infinite;
+}
+@keyframes blink{
+  0%{opacity: 0;}
+  50%{opacity: .5;}
+  100%{opacity: 1;}
+  }
+.result{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: cursive;
+  margin: 0;
 }
